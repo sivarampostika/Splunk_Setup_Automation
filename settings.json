@@ -1,0 +1,17 @@
+{
+  "docker": {
+    "docker_exe": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+  },
+  "splunk": {
+    "enterprise":{
+        "admin_username": "admin",
+        "admin_password": "admin@123",
+        "splunk_tgz_path": "C:\\Users\\SivaramM\\Desktop\\splunk-docker\\Downloads\\splunkenterprise.tgz"
+        },
+    "forwarder":{
+        "admin_username": "admin",
+        "admin_password": "admin@123",
+        "splunk_tgz_path": "C:\\Users\\SivaramM\\Desktop\\splunk-docker\\Downloads\\splunkforwarder.tgz"
+        }
+    }
+}
