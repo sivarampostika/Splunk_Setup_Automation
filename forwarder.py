@@ -8,17 +8,17 @@ import json
 with open("settings.json", "r") as f:
     config = json.load(f)
 
-if len(sys.argv) < 4:
-    print("Usage: python setup_splunk_container.py <container_name> <network_name> <port>")
+if len(sys.argv) < 2:
+    print("Usage: python setup_splunk_container.py <container_name> <network_name>")
     sys.exit(1)
 
 container_name = sys.argv[1]
 network_name = sys.argv[2]
 #=== Config ====
 docker_exe = config["docker"]["docker_exe"]
-splunk_tgz_path = config["splunk"]["enterprise"]["splunk_tgz_path"]
-splunk_user = config["splunk"]["enterprise"]["admin_username"]
-splunk_pass = config["splunk"]["enterprise"]["admin_password"]
+splunk_tgz_path = config["splunk"]["forwarder"]["splunk_tgz_path"]
+splunk_user = config["splunk"]["forwarder"]["admin_username"]
+splunk_pass = config["splunk"]["forwarder"]["admin_password"]
 
 match = re.search(r"([^\\\/]+\.tgz)$", splunk_tgz_path)
 if not match:

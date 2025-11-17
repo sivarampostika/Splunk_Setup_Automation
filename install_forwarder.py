@@ -15,9 +15,9 @@ if len(sys.argv) < 2:
 container_name = sys.argv[1]
 #=== Config ====
 docker_exe = config["docker"]["docker_exe"]
-splunk_tgz_path = config["splunk"]["enterprise"]["splunk_tgz_path"]
-splunk_user = config["splunk"]["enterprise"]["admin_username"]
-splunk_pass = config["splunk"]["enterprise"]["admin_password"]
+splunk_tgz_path = config["splunk"]["forwarder"]["splunk_tgz_path"]
+splunk_user = config["splunk"]["forwarder"]["admin_username"]
+splunk_pass = config["splunk"]["forwarder"]["admin_password"]
 
 match = re.search(r"([^\\\/]+\.tgz)$", splunk_tgz_path)
 if not match:
